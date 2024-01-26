@@ -1,3 +1,9 @@
+from datetime import datetime
+
+
 class Post:
     def __init__(self, text, date_time, user):
-        pass
+        self.id = None
+        self.text = text
+        self.date_time = datetime.now()
+        self.user = user
