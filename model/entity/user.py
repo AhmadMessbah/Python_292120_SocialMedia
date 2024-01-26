@@ -1,4 +1,4 @@
-class User:
+class User(Base):
     def __init__(self, name, family, username, password, role, status=True):
         self.id = None
         self.name = name

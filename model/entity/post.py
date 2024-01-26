@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class Post:
+class Post(Base):
     def __init__(self, text, date_time, user):
         self.id = None
         self.text = text

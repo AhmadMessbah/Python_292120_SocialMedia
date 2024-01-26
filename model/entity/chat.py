@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class Chat:
+class Chat(base):
     def __init__(self, text, date_time, sender, receiver):
         self.id = None
         self.text = text

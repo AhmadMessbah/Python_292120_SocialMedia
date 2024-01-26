@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class Like:
+class Like(Base):
     def __init__(self, post, user, date_time):
         self.id = None
         self.post = post
