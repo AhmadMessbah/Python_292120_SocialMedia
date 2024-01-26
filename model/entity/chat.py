@@ -9,3 +9,5 @@ class Chat:
         self.sender = sender
         self.receiver = receiver
 
+    def __repr__(self):
+        return str(self.__dict__)
