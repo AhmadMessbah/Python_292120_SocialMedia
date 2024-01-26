@@ -2,15 +2,12 @@ Online Store (Ticketing)
 
 Python - MySQL - Tkinter
 
-    - Negin SaatSaz
+    - Amir Reza Mehran
     
-    - Ashkan Roshani
+    - Mohammad Matin Salem
 
-    - Alireza ChaharDaghi
-
-    - Amir Mohammad SasanPour
-
-    - ? Zand
+    - Moeid Cheraghi
+ 
 
     
 

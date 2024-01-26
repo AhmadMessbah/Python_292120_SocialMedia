@@ -1,3 +1,3 @@
-class Comment:
-    def __init__(self,text, post, user, date_time):
+class Like:
+    def __init__(self, post, user, date_time):
         pass
