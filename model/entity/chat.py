@@ -11,7 +11,7 @@ class Chat(Base):
     reciever = Column(String(30))
     text = Column(String(30))
 
-    def __init__(self, text,sender, receiver):
+    def __init__(self, text, sender, receiver):
         self.text = text
         self.sender = sender
         self.receiver = receiver
