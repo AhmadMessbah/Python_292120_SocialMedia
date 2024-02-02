@@ -1,31 +1,47 @@
-from model.da.user_da import UserDa
+from model.da.user_da import *
+from tools.Validator import *
+from tools.entity.user import User
 
 
 class UserController:
-    def save(self, name, family, username, password, role, status=True):
+    def save(self, name, family, username, password, status=True):
         try:
-            # validation
-            # user = User()
-            # da = UserDa()
-            # da.save(user)
-            return "Saved"
+            if name_validator(name) and name_validator(family):
+                user = User(name, family, username, password, status=True)
+                da = UserDa()
+                da.save(user)
+                return "Saved"
+            else:
+                raise ValueError("Invalid Data")
         except Exception as e:
             return str(e)
+
 
     def edit(self, id, name, family, username, password, role, status):
         pass
 
+
     def remove(self, id):
         pass
+
 
     def find_all(self):
         pass
 
+
     def find_by_id(self, id):
-        pass
+        try:
+            da = UserDa()
+            return da.find_by_id(User, id)
+
+        except Exception as e:
+            return str(e)
+
 
     def find_by_username(self, username):
         pass
 
+
     def find_by_username_and_password(self, username, password):
         pass
+
