@@ -1,6 +1,16 @@
+from model.da.user_da import UserDa
+
+
 class UserController:
     def save(self, name, family, username, password, role, status=True):
-        pass
+        try:
+            # validation
+            # user = User()
+            # da = UserDa()
+            # da.save(user)
+            return "Saved"
+        except Exception as e:
+            return str(e)
 
     def edit(self, id, name, family, username, password, role, status):
         pass

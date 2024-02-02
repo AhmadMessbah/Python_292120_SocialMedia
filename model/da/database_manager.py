@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_utils import database_exists, create_database
-from model.entity.base import Base
+from tools.entity.base import Base
 class DatabaseManager:
     def __init__(self):
         self.session = None

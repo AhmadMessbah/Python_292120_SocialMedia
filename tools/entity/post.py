@@ -1,20 +1,22 @@
-from model.entity.base import Base
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 
+from tools.entity.base import Base
 
-class Like(Base):
-    __tablename__ = "like_tbl"
+
+class Post(Base):
+    __tablename__ = "post_tbl"
     id = Column(Integer, primary_key=True)
+    text = Column(String(30))
     date_time = Column(DateTime)
+
     user_id = Column(Integer, ForeignKey("user_tbl.id"))
     user = relationship("User")
-    post_id = Column(Integer, ForeignKey("post_tbl.id"))
-    post = relationship("Post")
 
-    def __init__(self, post, user):
-        self.post = post
-        self.user = user
+    comments = relationship("Comment", back_populates="post")
+
+    def __init__(self, text, user):
+        self.text = text
         self.date_time = datetime.now()
-
+        self.user = user
