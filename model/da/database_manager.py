@@ -59,8 +59,8 @@ class DatabaseManager:
         if entity:
             self.session.delete(entity)
             self.session.commit()
-            self.session.refresh(entity)
-            return entity
+
+
 
     def find_all(self, class_name):
         self.make_engine()

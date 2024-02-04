@@ -8,12 +8,14 @@ dm = DatabaseManager()
 #
 # user_1 = User("amir", "reza", "ali123", "879000")
 # dm.save(user_1)
-# user_2 = User("ahmad", "mesbah", "09123", "0409")
-#
-# # dm.save(user_1)
-# # dm.save(user_2)
-# post_1 = Post("salam bacheha", user_2)
-#
+# user_1 = User("ahmad", "ahmdzadeh", "09123", "0409")
+# user_2 = User("ghasem", "tavasoliam", "09123", "0409")
+# user_3 = User("hooshanf", "aramo", "09123", "0409")
+# user_4 = User("aliyar", "tavasoliam", "09123", "0409")
+# dm.save(user_1)
+# dm.save(user_2)
+# # post_1 = Post("salam bacheha", user_2)
+# #
 # # dm.save(post_1)
 # like_1 = Like(post_1, user_1)
 #
@@ -26,4 +28,4 @@ dm = DatabaseManager()
 # user.family="Mehran"
 # user.password="mojtamefanni"
 # dm.edit(user)
-#
+dm.remove_by_id(User, 10)
