@@ -36,7 +36,16 @@ class UserController:
             return str(e)
 
     def remove(self, id):
-        pass
+        try:
+
+            da = UserDa()
+            if da.find_by_id(User, id):
+                da.remove_by_id(User, id)
+                return "Removed"
+            else:
+                raise ValueError("Item Not Found!!!")
+        except Exception as e:
+            return str(e)
 
     def find_all(self):
         pass

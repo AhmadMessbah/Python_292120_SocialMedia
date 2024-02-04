@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="created the da for all entitites. =Amirreza">
-      <change afterPath="$PROJECT_DIR$/test/controllertest.py" afterDir="false" />
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="user controller initiated and concurrently tested save and edit fuctions completed. Amirreza">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/comment.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/comment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/like.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/like.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllertest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllertest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +148,7 @@
       <workItem from="1706885783336" duration="36000" />
       <workItem from="1706885838547" duration="35000" />
       <workItem from="1706885943202" duration="2627000" />
-      <workItem from="1707023075468" duration="23943000" />
+      <workItem from="1707023075468" duration="27728000" />
     </task>
     <task id="LOCAL-00001" summary="Entity Updated">
       <option name="closed" value="true" />
@@ -385,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707049326714</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="user controller initiated and concurrently tested save and edit fuctions completed. Amirreza">
+      <option name="closed" value="true" />
+      <created>1707053790328</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1707053790328</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +458,8 @@
     <MESSAGE value="incoporated error managment to the remove_by_id function for social media use case -Amirreza" />
     <MESSAGE value="completeley tailored and tested the database_manager for social media usecase -Amirreza" />
     <MESSAGE value="created the da for all entitites. =Amirreza" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the da for all entitites. =Amirreza" />
+    <MESSAGE value="user controller initiated and concurrently tested save and edit fuctions completed. Amirreza" />
+    <option name="LAST_COMMIT_MESSAGE" value="user controller initiated and concurrently tested save and edit fuctions completed. Amirreza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -475,10 +481,10 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$chat.coverage" NAME="chat Coverage Results" MODIFIED="1706284039441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_test.coverage" NAME="user_test Coverage Results" MODIFIED="1707035790740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post.coverage" NAME="post Coverage Results" MODIFIED="1707051481432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1706888328243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1707060419377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$base.coverage" NAME="base Coverage Results" MODIFIED="1706284034380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707046734890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$controllertest.coverage" NAME="controllertest Coverage Results" MODIFIED="1707051741716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$controllertest.coverage" NAME="controllertest Coverage Results" MODIFIED="1707060592806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_da.coverage" NAME="user_da Coverage Results" MODIFIED="1707049232456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user.coverage" NAME="user Coverage Results" MODIFIED="1707051475791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
   </component>
