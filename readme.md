@@ -5,8 +5,6 @@ Python - MySQL - Tkinter
     - Amir Reza Mehran
     
     - Mohammad Matin Salem
-
-    - Moeid Cheraghi
  
 
     
