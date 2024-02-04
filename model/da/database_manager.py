@@ -32,10 +32,17 @@ class DatabaseManager:
 
     def edit(self, entity):
         self.make_engine()
-        self.session.merge(entity)
-        self.session.commit()
-        self.session.refresh(entity)
-        return entity
+        if self.session.identity_key(instance=entity) is not None:
+            in_session_entity = entity
+        else:
+            in_session_entity = self.session.merge(entity)
+        try:
+            self.session.commit()
+        except Exception as e:
+            self.session.rollback()
+            raise e
+        self.session.refresh(in_session_entity)
+        return in_session_entity
 
     def remove(self, entity):
         self.make_engine()
