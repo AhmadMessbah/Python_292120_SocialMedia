@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="updated the edit function in database_manager and correponding test Amirreza">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c/storage_v2/_src_/schema/mft.-6UBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c/storage_v2/_src_/schema/mft.-6UBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/da/database_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/da/database_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/entitytests+database_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/entitytests+database_manager.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="incoporated error managment to the remove_by_id function for social media use case -Amirreza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +144,7 @@
       <workItem from="1706885783336" duration="36000" />
       <workItem from="1706885838547" duration="35000" />
       <workItem from="1706885943202" duration="2627000" />
-      <workItem from="1707023075468" duration="18088000" />
+      <workItem from="1707023075468" duration="19994000" />
     </task>
     <task id="LOCAL-00001" summary="Entity Updated">
       <option name="closed" value="true" />
@@ -296,7 +290,39 @@
       <option name="project" value="LOCAL" />
       <updated>1707039533701</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated the remove function for social media use case -Amirreza">
+      <option name="closed" value="true" />
+      <created>1707045355172</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707045355172</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated the remove function for social media use case -Amirreza">
+      <option name="closed" value="true" />
+      <created>1707045383677</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707045383677</updated>
+    </task>
+    <task id="LOCAL-00021" summary="updated the remove_by_id function for social media use case -Amirreza">
+      <option name="closed" value="true" />
+      <created>1707045826175</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707045826176</updated>
+    </task>
+    <task id="LOCAL-00022" summary="incoporated error managment to the remove_by_id function for social media use case -Amirreza">
+      <option name="closed" value="true" />
+      <created>1707045945669</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707045945669</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +385,10 @@
     <MESSAGE value="test operation started Amirreza" />
     <MESSAGE value="updated the database_manager 4 efficiency amirreza" />
     <MESSAGE value="updated the edit function in database_manager and correponding test Amirreza" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the edit function in database_manager and correponding test Amirreza" />
+    <MESSAGE value="updated the remove function for social media use case -Amirreza" />
+    <MESSAGE value="updated the remove_by_id function for social media use case -Amirreza" />
+    <MESSAGE value="incoporated error managment to the remove_by_id function for social media use case -Amirreza" />
+    <option name="LAST_COMMIT_MESSAGE" value="incoporated error managment to the remove_by_id function for social media use case -Amirreza" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$like.coverage" NAME="like Coverage Results" MODIFIED="1706284056886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
@@ -368,9 +397,9 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_test.coverage" NAME="user_test Coverage Results" MODIFIED="1707035790740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1706888328243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$base.coverage" NAME="base Coverage Results" MODIFIED="1706284034380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707044128964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707045916820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_da.coverage" NAME="user_da Coverage Results" MODIFIED="1707026683497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$database_manager.coverage" NAME="database_manager Coverage Results" MODIFIED="1707039990940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$database_manager.coverage" NAME="database_manager Coverage Results" MODIFIED="1707045670546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$chat_da.coverage" NAME="chat_da Coverage Results" MODIFIED="1706284023829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user.coverage" NAME="user Coverage Results" MODIFIED="1706284092839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$comment.coverage" NAME="comment Coverage Results" MODIFIED="1707029114429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/entity" />

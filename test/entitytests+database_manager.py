@@ -27,5 +27,7 @@ dm = DatabaseManager()
 # user=dm.find_by_id(User, 5)
 # user.family="Mehran"
 # user.password="mojtamefanni"
-# dm.edit(user)
-dm.remove_by_id(User, 4)
+# # dm.edit(user)
+# dm.remove_by_id(User, 4)
+#print(dm.find_all(User))
+print(dm.find_by_id(Post, 1))
