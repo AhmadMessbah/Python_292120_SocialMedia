@@ -1,6 +1,6 @@
 from model.da.user_da import *
 from tools.Validator import *
-from tools.entity.user import User
+from model.entity.user import User
 
 
 class UserController:

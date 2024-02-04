@@ -1,26 +1,31 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy_utils import database_exists, create_database
-from tools.entity.base import Base
+from model.entity.base import Base
+
+
 class DatabaseManager:
     def __init__(self):
-        self.session = None
         self.engine = None
+        self.session_factory = None
+        self.session = None
 
     def make_engine(self):
-        # mysql+pymysql://user:password@localhost:3306/database_name
         if not database_exists("mysql+pymysql://root:root123@localhost:3306/mft"):
             create_database("mysql+pymysql://root:root123@localhost:3306/mft")
-
-        self.engine = create_engine("mysql+pymysql://root:root123@localhost:3306/mft", echo=True)
-
-        Base.metadata.create_all(self.engine)
-        Session = sessionmaker(bind=self.engine)
-        self.session = Session()
+        if not self.engine:
+            self.engine = create_engine("mysql+pymysql://root:root123@localhost:3306/mft", echo=True)
+            Base.metadata.create_all(self.engine)
+            self.session_factory = sessionmaker(bind=self.engine)
+        if not self.session:
+            self.session = scoped_session(self.session_factory)
 
     def save(self, entity):
         self.make_engine()
-        self.session.add(entity)
+        if not self.session.is_active:
+            self.session = scoped_session(self.session_factory)
+        if entity not in self.session:
+            self.session.add(entity)
         self.session.commit()
         self.session.refresh(entity)
         return entity

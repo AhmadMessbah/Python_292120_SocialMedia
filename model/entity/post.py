@@ -1,7 +1,7 @@
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from tools.entity.base import Base
+from model.entity.base import Base
 
 
 class Post(Base):
@@ -10,10 +10,10 @@ class Post(Base):
     text = Column(String(30))
     date_time = Column(DateTime)
 
-    user_id = Column(Integer, ForeignKey("user_tbl.id"))
+    user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
     user = relationship("User")
 
-    #comments = relationship("Comment", back_populates="post")
+    comments = relationship("Comment", back_populates="post")
 
     def __init__(self, text, user):
         self.text = text

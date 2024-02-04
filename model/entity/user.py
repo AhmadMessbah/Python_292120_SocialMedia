@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime
+from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.orm import relationship
-from tools.entity.base import Base
+from model.entity.base import Base
 
 
 class User(Base):
@@ -11,7 +11,9 @@ class User(Base):
     username = Column(String(30))
     password = Column(String(30))
     status = Column(Boolean)
-    #posts = relationship("Post", back_populates="user")
+
+    posts = relationship("Post", back_populates="user")
+    comments = relationship("Comment", back_populates="user")
 
     def __init__(self, name, family, username, password, status=True):
         self.name = name
