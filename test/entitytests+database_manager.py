@@ -22,7 +22,10 @@ dm = DatabaseManager()
 # # (dm.save(comment_1))
 # print(like_1)
 # print(user_2)
+# user=dm.find_by_id(User, 5)
+# user.family="Mehran"
+# user.password="mojtamefanni"
+# dm.edit(user)
 user=dm.find_by_id(User, 5)
-user.family="Mehran"
-user.password="mojtamefanni"
-dm.edit(user)
+dm.remove(user)
+

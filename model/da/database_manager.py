@@ -46,10 +46,12 @@ class DatabaseManager:
 
     def remove(self, entity):
         self.make_engine()
-        self.session.delete(entity)
-        self.session.commit()
-        self.session.refresh(entity)
-        return entity
+        try:
+            self.session.delete(entity)
+            self.session.commit()
+        except Exception as e:
+            self.session.rollback()
+            raise e
 
     def remove_by_id(self, class_name, id):
         self.make_engine()
