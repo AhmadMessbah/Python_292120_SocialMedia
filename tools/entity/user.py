@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.orm import relationship
-
 from tools.entity.base import Base
 
 
@@ -12,8 +11,7 @@ class User(Base):
     username = Column(String(30))
     password = Column(String(30))
     status = Column(Boolean)
-
-    posts = relationship("Post", back_populates="user")
+    #posts = relationship("Post", back_populates="user")
 
     def __init__(self, name, family, username, password, status=True):
         self.name = name
@@ -21,4 +19,3 @@ class User(Base):
         self.username = username
         self.password = password
         self.status = status
-

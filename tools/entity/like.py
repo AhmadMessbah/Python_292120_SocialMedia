@@ -19,4 +19,3 @@ class Like(Base):
         self.post = post
         self.user = user
         self.date_time = datetime.now()
-
