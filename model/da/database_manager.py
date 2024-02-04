@@ -2,6 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy_utils import database_exists, create_database
 from model.entity.base import Base
+from sqlalchemy import and_
+
+
 
 
 class DatabaseManager:
@@ -78,3 +81,11 @@ class DatabaseManager:
         self.make_engine()
         result = self.session.query(class_name).filter(class_name.username == username).all()
         return result
+
+    def find_by_username_and_password(self, class_name, username,password):
+        try:
+            self.make_engine()
+            result = self.session.query(class_name).filter(and_(class_name.username == username, class_name.password == password)).one()
+            return result
+        except Exception as e:
+            raise ValueError("Username and/or Password doesnt Exist")

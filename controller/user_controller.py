@@ -62,7 +62,7 @@ class UserController:
     def find_by_username(self, username):
         try:
             da = UserDa()
-            if da.find_by_username(User,username):
+            if da.find_by_username(User, username):
                 return da.find_by_username(User, username)
             else:
                 raise ValueError("Username Doesn't Exist!!!")
@@ -70,7 +70,12 @@ class UserController:
             return str(e)
 
     def find_by_username_and_password(self, username, password):
-        pass
-
-
+        try:
+            da = UserDa()
+            if da.find_by_username_and_password(User, username, password):
+                return da.find_by_username_and_password(User, username, password)
+            else:
+                raise ValueError("Username or Password Doesn't Exist!!!")
+        except Exception as e:
+            return str(e)
 
