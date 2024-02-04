@@ -73,3 +73,8 @@ class DatabaseManager:
         self.make_engine()
         entity = self.session.get(class_name, id)
         return entity
+
+    def find_by_username(self, class_name, username):
+        self.make_engine()
+        result = self.session.query(class_name).filter(class_name.username == username).all()
+        return result

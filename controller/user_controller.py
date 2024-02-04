@@ -6,9 +6,10 @@ from model.entity.comment import Comment
 
 
 class UserController:
+
     def save(self, name, family, username, password, status=True):
         try:
-            if name_validator(name) and name_validator(family):
+            if name_validator(name) and name_validator(family) and username_validator(username):
                 user = User(name, family, username, password, status=True)
                 da = UserDa()
                 da.save(user)
@@ -59,7 +60,17 @@ class UserController:
             return str(e)
 
     def find_by_username(self, username):
-        pass
+        try:
+            da = UserDa()
+            if da.find_by_username(User,username):
+                return da.find_by_username(User, username)
+            else:
+                raise ValueError("Username Doesn't Exist!!!")
+        except Exception as e:
+            return str(e)
 
     def find_by_username_and_password(self, username, password):
         pass
+
+
+
