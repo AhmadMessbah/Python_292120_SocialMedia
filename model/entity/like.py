@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 
 
+
 class Like(Base):
     __tablename__ = "like_tbl"
     id = Column(Integer, primary_key=True)

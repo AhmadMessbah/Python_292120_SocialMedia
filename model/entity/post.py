@@ -3,7 +3,6 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from model.entity.base import Base
 
-
 class Post(Base):
     __tablename__ = "post_tbl"
     id = Column(Integer, primary_key=True)
@@ -11,7 +10,7 @@ class Post(Base):
     date_time = Column(DateTime)
 
     user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
-    user = relationship("User")
+    user = relationship("User", back_populates="posts")
 
     comments = relationship("Comment", back_populates="post")
 
