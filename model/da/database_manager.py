@@ -57,10 +57,12 @@ class DatabaseManager:
         self.make_engine()
         entity = self.session.get(class_name, id)
         if entity:
-            self.session.delete(entity)
-            self.session.commit()
-
-
+            try:
+                self.session.delete(entity)
+                self.session.commit()
+            except Exception as e:
+                self.session.rollback()
+                raise e
 
     def find_all(self, class_name):
         self.make_engine()

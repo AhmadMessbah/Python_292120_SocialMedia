@@ -28,4 +28,4 @@ dm = DatabaseManager()
 # user.family="Mehran"
 # user.password="mojtamefanni"
 # dm.edit(user)
-dm.remove_by_id(User, 10)
+dm.remove_by_id(User, 4)
