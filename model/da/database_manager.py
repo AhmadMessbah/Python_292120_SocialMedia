@@ -102,3 +102,8 @@ class DatabaseManager:
         self.make_engine()
         result = self.session.query(class_name).filter(class_name.text == text).all()
         return result
+
+    def find_by_post(self, class_name, post):
+        self.make_engine()
+        result = self.session.query(class_name).filter(class_name.post == post).all()
+        return result
