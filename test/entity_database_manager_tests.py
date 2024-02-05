@@ -17,7 +17,7 @@
 # # # post_1 = Post("salam bacheha", user_2)
 # # #
 # # # dm.save(post_1)
-# # like_1 = Like(post_1, user_1)
+# like_1 = Like(post_1, user_1)
 # #
 # # # dm.save(like_1)
 # # comment_1 = Comment("lSalam ostade aziz", post_1, user_1)
