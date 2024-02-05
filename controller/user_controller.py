@@ -49,13 +49,17 @@ class UserController:
             return str(e)
 
     def find_all(self):
-        pass
+        try:
+            da = UserDa()
+            return da.find_all(User)
+        except Exception as e:
+            return str(e)
+
 
     def find_by_id(self, id):
         try:
             da = UserDa()
             return da.find_by_id(User, id)
-
         except Exception as e:
             return str(e)
 
