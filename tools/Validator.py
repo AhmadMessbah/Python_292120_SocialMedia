@@ -1,4 +1,5 @@
 import re
+
 from model.da.database_manager import DatabaseManager
 from model.entity.user import User
 
@@ -13,4 +14,5 @@ def username_validator(x):
         return True
     else:
         raise ValueError("Duplicate Username")
+
 

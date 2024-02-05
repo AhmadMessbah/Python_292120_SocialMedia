@@ -40,7 +40,6 @@ class DatabaseManager:
         try:
             self.session.commit()
         except Exception as e:
-            self.session.rollback()
             raise e
         self.session.refresh(in_session_entity)
         return in_session_entity
@@ -94,3 +93,12 @@ class DatabaseManager:
         entity = self.session.get(class_name, id)
         self.session.close()
         return entity
+
+    def find_by_user(self, class_name, user):
+        self.make_engine()
+        result = self.session.query(class_name).filter(class_name.user == user).all()
+        return result
+    def find_by_text(self, class_name, text):
+        self.make_engine()
+        result = self.session.query(class_name).filter(class_name.text == text).all()
+        return result

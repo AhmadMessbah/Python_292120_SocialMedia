@@ -18,4 +18,4 @@ class Post(Base):
         self.text = text
         self.date_time = datetime.now()
         self.user = user
-# salam
+

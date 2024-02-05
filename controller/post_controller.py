@@ -1,8 +1,11 @@
+from datetime import datetime
 from model.entity.user import User
 from model.entity.post import Post
 from model.entity.comment import Comment
 from model.entity.like import Like
 from model.da.post_da import *
+
+
 
 class PostController:
 
@@ -15,65 +18,71 @@ class PostController:
         except Exception as e:
             return str(e)
 
-    def edit(self, id, name, family, username, password, status):
+    def edit(self, id, text, user):
         try:
-            if name_validator(name) and name_validator(family):
-                da = UserDa()
-                user = da.find_by_id(User, id)
-                user.name = name
-                user.family = family
-                user.username = username
-                user.password = password
-                user.status = status
-                da.edit(user)
+            da = PostDa()
+            post = da.find_by_id(Post, id)
+            if len(text)<30:
+                post.user = user
+                post.text = text
+                post.date_time = datetime.now()
+                da.edit(post)
                 return "Edited"
             else:
-                raise ValueError("Invalid Data")
+                raise ValueError("Text Too Long")
         except Exception as e:
             return str(e)
 
     def remove(self, id):
         try:
-
-            da = UserDa()
-            if da.find_by_id(User, id):
-                da.remove_by_id(User, id)
+            da = PostDa()
+            if da.find_by_id(Post, id):
+                da.remove_by_id(Post, id)
                 return "Removed"
             else:
-                raise ValueError("Item Not Found!!!")
+                raise ValueError("Post Doesnt Exist!!!")
         except Exception as e:
             return str(e)
+
 
     def find_all(self):
         try:
-            da = UserDa()
-            return da.find_all(User)
+            da = PostDa()
+            return da.find_all(Post)
         except Exception as e:
             return str(e)
+
 
     def find_by_id(self, id):
         try:
-            da = UserDa()
-            return da.find_by_id(User, id)
+            da = PostDa()
+            return da.find_by_id(Post, id)
         except Exception as e:
             return str(e)
 
-    def find_by_username(self, username):
+    def find_by_id_internal(self, id):
         try:
-            da = UserDa()
-            if da.find_by_username(User, username):
-                return da.find_by_username(User, username)
-            else:
-                raise ValueError("Username Doesn't Exist!!!")
+            da = PostDa()
+            return da.find_by_id_internal(Post, id)
         except Exception as e:
             return str(e)
 
-    def find_by_username_and_password(self, username, password):
+    def find_by_user(self, user):
         try:
-            da = UserDa()
-            if da.find_by_username_and_password(User, username, password):
-                return da.find_by_username_and_password(User, username, password)
+            da = PostDa()
+            if da.find_by_user(Post, user):
+                return da.find_by_user(Post, user)
             else:
-                raise ValueError("Username or Password Doesn't Exist!!!")
+                raise ValueError("User Doesn't Exist!!!")
+        except Exception as e:
+            return str(e)
+
+    def find_by_text(self, text):
+        try:
+            da = PostDa()
+            if da.find_by_text(Post, text):
+                return da.find_by_text(Post,text)
+            else:
+                raise ValueError("Post Doesn't Exist!!!")
         except Exception as e:
             return str(e)
