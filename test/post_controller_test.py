@@ -12,6 +12,6 @@ from controller.post_controller import PostController
 
 uc = UserController()
 pc = PostController()
-user = uc.find_by_id(1)
+user = uc.find_by_id_internal(1)
 print(user)
 print(pc.save("salam ostad", user))

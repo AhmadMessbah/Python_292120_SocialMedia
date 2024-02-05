@@ -63,6 +63,13 @@ class UserController:
         except Exception as e:
             return str(e)
 
+    def find_by_id_internal(self, id):
+        try:
+            da = UserDa()
+            return da.find_by_id_internal(User, id)
+        except Exception as e:
+            return str(e)
+
     def find_by_username(self, username):
         try:
             da = UserDa()
