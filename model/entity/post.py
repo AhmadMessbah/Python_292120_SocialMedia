@@ -12,7 +12,8 @@ class Post(Base):
     user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
     user = relationship("User", back_populates="posts")
 
-    comments = relationship("Comment", back_populates="post", cascade="delete-orphan")
+    comments = relationship("Comment", back_populates="post", cascade="all, delete-orphan")
+    likes = relationship("Like", back_populates="post", cascade="all, delete-orphan")
 
     def __init__(self, text, user):
         self.text = text
