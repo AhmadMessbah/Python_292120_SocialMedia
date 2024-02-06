@@ -21,7 +21,7 @@ class UserController:
 
     def edit(self, id, name, family, username, password, status):
         try:
-            if name_validator(name) and name_validator(family):
+            if name_validator(name) and name_validator(family) and username_validator(username):
                 da = UserDa()
                 user = da.find_by_id(User, id)
                 user.name = name
@@ -38,13 +38,12 @@ class UserController:
 
     def remove(self, id):
         try:
-
             da = UserDa()
             if da.find_by_id(User, id):
                 da.remove_by_id(User, id)
                 return "Removed"
             else:
-                raise ValueError("Item Not Found!!!")
+                raise ValueError("Item Doesn't Exist!!!")
         except Exception as e:
             return str(e)
 
@@ -55,18 +54,23 @@ class UserController:
         except Exception as e:
             return str(e)
 
-
     def find_by_id(self, id):
         try:
             da = UserDa()
-            return da.find_by_id(User, id)
+            if da.find_by_id(User, id):
+                return da.find_by_id(User, id)
+            else:
+                raise ValueError("Item Doesnt Exist")
         except Exception as e:
             return str(e)
 
     def find_by_id_internal(self, id):
         try:
             da = UserDa()
-            return da.find_by_id_internal(User, id)
+            if da.find_by_id_internal(User, id):
+                return da.find_by_id_internal(User, id)
+            else:
+                raise ValueError("Item Doesnt Exist")
         except Exception as e:
             return str(e)
 
@@ -89,4 +93,3 @@ class UserController:
                 raise ValueError("Username or Password Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
