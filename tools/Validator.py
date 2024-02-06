@@ -18,13 +18,6 @@ def username_validator(x):
         raise ValueError("Duplicate Username")
 
 
-def user_validator(x):
-    db = DatabaseManager()
-    if db.find_by_id_internal(User, x.id):
-        return True
-    else:
-        raise ValueError("User Doesn't Exist!!!")
-
 
 def text_validator(x):
         if len(x)<30:
@@ -46,8 +39,11 @@ def user_id_validator(x):
     else:
         raise ValueError("User Doesnt Exist")
 
+
+
+
 #print(user_id_validator(20))
 # db = DatabaseManager()
-# user = db.find_by_id_internal(User, 90)
+#user = db.find_by_id_internal(User, 90)
 # #post=db.find_by_id_internal(Post, 10)
 #print(post_id_validator(9))

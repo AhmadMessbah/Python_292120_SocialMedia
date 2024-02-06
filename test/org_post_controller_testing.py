@@ -8,11 +8,10 @@ from model.entity.comment import Comment
 from model.entity.like import Like
 
 pc2 = PostController()
-#uc = UserController()
-print(pc2.remove(10))
+uc = UserController()
 
-
-#user = uc.find_by_id_internal(17)
+print(pc2.save("chetorrin doost ", uc.find_by_id_internal(18)))
+print(pc2.save("chetorrin doost ", uc.find_by_id_internal(180)))
 #print(pc2.edit(15, "sorry", user))
 # print(pc2.edit(15, "tolerance", user))
 # print(pc2.edit(15, "tolerance", user))
