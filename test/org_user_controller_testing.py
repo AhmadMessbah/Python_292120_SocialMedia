@@ -6,7 +6,7 @@ from model.entity.user import User
 
 
 uc = UserController()
-print(uc.remove(13))
+print(uc.remove(2))
 #save(self, name, family, username, password, status=True):
 # print(uc.save("alireza", "rahmani", "ali123", "sam123", status=True))
 #print(uc.edit(18, "Seyed alireza", "rahmani", "777", "sam123", status=True))
