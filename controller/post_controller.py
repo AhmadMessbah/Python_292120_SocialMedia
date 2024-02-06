@@ -4,17 +4,20 @@ from model.entity.post import Post
 from model.entity.comment import Comment
 from model.entity.like import Like
 from model.da.post_da import *
-
+from tools.Validator import user_validator, text_validator
 
 
 class PostController:
 
     def save(self, text, user):
         try:
-            post = Post(text, user)
-            da = PostDa()
-            da.save(post)
-            return "Saved"
+            if user_validator(user) and text_validator(text):
+                post = Post(text, user)
+                da = PostDa()
+                da.save(post)
+                return "Saved"
+            else:
+                raise ValueError("Invalid Data")
         except Exception as e:
             return str(e)
 
