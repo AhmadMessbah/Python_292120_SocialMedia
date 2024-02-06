@@ -12,7 +12,7 @@ class Post(Base):
     user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
     user = relationship("User", back_populates="posts")
 
-    comments = relationship("Comment", back_populates="post")
+    comments = relationship("Comment", back_populates="post", cascade="delete-orphan")
 
     def __init__(self, text, user):
         self.text = text

@@ -34,7 +34,14 @@ def text_validator(x):
         else:
             raise ValueError("Text Too Long!!")
 
-#
-# db = DatabaseManager()
+def post_id_validator(x):
+        db = DatabaseManager()
+        if db.find_by_id_internal(Post, x):
+            return True
+        else:
+            raise ValueError("Post Doesn't Exist!!!")
+
+#db = DatabaseManager()
 # user = db.find_by_id_internal(User, 90)
-# print(user_validator(user))
+#post=db.find_by_id_internal(Post, 10)
+#print(post_id_validator(9))

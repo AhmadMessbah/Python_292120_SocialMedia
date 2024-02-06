@@ -4,7 +4,7 @@ from model.entity.post import Post
 from model.entity.comment import Comment
 from model.entity.like import Like
 from model.da.post_da import *
-from tools.Validator import user_validator, text_validator
+from tools.Validator import user_validator, text_validator, post_id_validator
 
 
 class PostController:
@@ -23,27 +23,28 @@ class PostController:
 
     def edit(self, id, text, user):
         try:
-            da = PostDa()
-            post = da.find_by_id(Post, id)
-            if len(text)<30:
+            if text_validator(text) and user_validator(user) and post_id_validator(id):
+                da = PostDa()
+                post = da.find_by_id(Post, id)
                 post.user = user
                 post.text = text
                 post.date_time = datetime.now()
                 da.edit(post)
                 return "Edited"
             else:
-                raise ValueError("Text Too Long")
+                raise ValueError
         except Exception as e:
             return str(e)
 
     def remove(self, id):
         try:
-            da = PostDa()
-            if da.find_by_id(Post, id):
-                da.remove_by_id(Post, id)
-                return "Removed"
+            if post_id_validator(id):
+                da = PostDa()
+                if da.find_by_id(Post, id):
+                    da.remove_by_id(Post, id)
+                    return "Removed"
             else:
-                raise ValueError("Post Doesnt Exist!!!")
+                raise ValueError
         except Exception as e:
             return str(e)
 
