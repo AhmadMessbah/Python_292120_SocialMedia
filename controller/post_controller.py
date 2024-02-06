@@ -5,7 +5,7 @@ from model.entity.post import Post
 from model.entity.comment import Comment
 from model.entity.like import Like
 from model.da.post_da import *
-from tools.Validator import text_validator, post_id_validator
+from tools.Validator import text_validator, post_id_validator, user_id_validator
 
 
 class PostController:
@@ -18,9 +18,9 @@ class PostController:
                 da.save(post)
                 return "Saved"
             else:
-                raise ValueError("Invalid User")
+                raise ValueError
         except Exception as e:
-            str(e)
+            return str(e)
 
     # def edit(self, id, text, user):
     #     try:

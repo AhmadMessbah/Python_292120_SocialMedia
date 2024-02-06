@@ -4,6 +4,8 @@ from sqlalchemy_utils import database_exists, create_database
 from model.entity.base import Base
 from sqlalchemy import and_
 
+from model.entity.user import User
+
 
 class DatabaseManager:
     def __init__(self):
@@ -98,6 +100,7 @@ class DatabaseManager:
         self.make_engine()
         result = self.session.query(class_name).filter(class_name.user == user).all()
         return result
+
     def find_by_text(self, class_name, text):
         self.make_engine()
         result = self.session.query(class_name).filter(class_name.text == text).all()
@@ -107,3 +110,8 @@ class DatabaseManager:
         self.make_engine()
         result = self.session.query(class_name).filter(class_name.post == post).all()
         return result
+
+
+
+
+

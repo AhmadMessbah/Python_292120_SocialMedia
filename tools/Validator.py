@@ -20,10 +20,16 @@ def username_validator(x):
 
 
 def text_validator(x):
-        if len(x)<30:
-            return True
-        else:
-            raise ValueError("Text Too Long!!")
+    if len(x)<30:
+        return True
+    else:
+        raise ValueError("Text Too Long!!")
+
+def text_validator(x):
+    if len(x)<30:
+        return True
+    else:
+        raise ValueError("Text Too Long!!")
 
 def post_id_validator(x):
         db = DatabaseManager()
@@ -33,14 +39,14 @@ def post_id_validator(x):
             raise ValueError("Post Doesn't Exist!!!")
 
 def user_id_validator(x):
-    db = DatabaseManager()
-    if db.find_by_id_internal(User, x):
-        return db.find_by_id_internal(User, x)
-    else:
+    try:
+        db = DatabaseManager()
+        if db.find_by_id_internal(User, x):
+            return db.find_by_id_internal(User, x)
+        else:
+            raise ValueError("User Doesnt Exist")
+    except:
         raise ValueError("User Doesnt Exist")
-
-
-
 
 #print(user_id_validator(20))
 # db = DatabaseManager()
