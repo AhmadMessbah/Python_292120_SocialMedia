@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Like controller was inititatred completed and tested succesfully.  -Amirreaza">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_2_2024_6_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_2_2024_6_29_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/post_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/post_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org_post_controller_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/org_post_controller_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org_user_controller_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/org_user_controller_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/Validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Validator.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="modified classes definition to address some bug in testing.  -Amirreaza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -172,7 +162,7 @@
       <workItem from="1707154183858" duration="430000" />
       <workItem from="1707155135960" duration="13171000" />
       <workItem from="1707194301208" duration="4213000" />
-      <workItem from="1707208277405" duration="4519000" />
+      <workItem from="1707208277405" duration="6592000" />
     </task>
     <task id="LOCAL-00001" summary="Entity Updated">
       <option name="closed" value="true" />
@@ -478,7 +468,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707166069739</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="modified classes definition to address some bug in testing.  -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707229293274</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1707229293274</updated>
+    </task>
+    <task id="LOCAL-00040" summary="modified classes definition to address some bug in testing.  -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707230210039</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1707230210039</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +557,8 @@
     <MESSAGE value="user_controller.py was completed and tested successfully -Amirreaza" />
     <MESSAGE value="post controller was completed and tested succesfully.  -Amirreaza" />
     <MESSAGE value="Like controller was inititatred completed and tested succesfully.  -Amirreaza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Like controller was inititatred completed and tested succesfully.  -Amirreaza" />
+    <MESSAGE value="modified classes definition to address some bug in testing.  -Amirreaza" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified classes definition to address some bug in testing.  -Amirreaza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -563,7 +570,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/org_user_controller_testing.py</url>
-          <line>4</line>
+          <line>9</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -591,7 +598,7 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_test.coverage" NAME="user_test Coverage Results" MODIFIED="1707035790740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post.coverage" NAME="post Coverage Results" MODIFIED="1707158148257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$base.coverage" NAME="base Coverage Results" MODIFIED="1707140437851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$org_user_controller_testing.coverage" NAME="org_user_controller_testing Coverage Results" MODIFIED="1707227862658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$org_user_controller_testing.coverage" NAME="org_user_controller_testing Coverage Results" MODIFIED="1707229192847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$controllertest.coverage" NAME="controllertest Coverage Results" MODIFIED="1707156680090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post_controller_test.coverage" NAME="post_controller_test Coverage Results" MODIFIED="1707163106613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$like_controller_test.coverage" NAME="like_controller_test Coverage Results" MODIFIED="1707166021700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
