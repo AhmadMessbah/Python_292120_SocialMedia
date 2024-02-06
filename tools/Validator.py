@@ -1,8 +1,8 @@
 import re
 from model.da.database_manager import DatabaseManager
-from model.entity import user
 from model.entity.user import User
 from model.entity.post import Post
+from model.entity.like import Like
 from model.entity.comment import Comment
 
 
@@ -19,14 +19,12 @@ def username_validator(x):
 
 
 def user_validator(x):
-    try:
-        db = DatabaseManager()
-        if db.find_by_id_internal(User, x.id):
-            return True
-        else:
-            raise ValueError("User Doesn't Exist!!!")
-    except Exception as e:
-            raise ValueError("User Doesn't Exist!!!")
+    db = DatabaseManager()
+    if db.find_by_id_internal(User, x.id):
+        return True
+    else:
+        raise ValueError("User Doesn't Exist!!!")
+
 
 def text_validator(x):
         if len(x)<30:
@@ -41,7 +39,15 @@ def post_id_validator(x):
         else:
             raise ValueError("Post Doesn't Exist!!!")
 
-#db = DatabaseManager()
+def user_id_validator(x):
+    db = DatabaseManager()
+    if db.find_by_id_internal(User, x):
+        return db.find_by_id_internal(User, x)
+    else:
+        raise ValueError("User Doesnt Exist")
+
+#print(user_id_validator(20))
+# db = DatabaseManager()
 # user = db.find_by_id_internal(User, 90)
-#post=db.find_by_id_internal(Post, 10)
+# #post=db.find_by_id_internal(Post, 10)
 #print(post_id_validator(9))
