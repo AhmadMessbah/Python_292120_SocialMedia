@@ -9,11 +9,11 @@ class Post(Base):
     text = Column(String(30))
     date_time = Column(DateTime)
 
-    user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
-    user = relationship("User", back_populates="posts")
+    user_id = Column(Integer, ForeignKey("user_tbl.id"))
+    user = relationship("User")
 
-    comments = relationship("Comment", back_populates="post", cascade="all, delete-orphan")
-    likes = relationship("Like", back_populates="post", cascade="all, delete-orphan")
+    comments = relationship("Comment")
+    likes = relationship("Like")
 
     def __init__(self, text, user):
         self.text = text

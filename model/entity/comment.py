@@ -10,10 +10,10 @@ class Comment(Base):
     text = Column(String(30))
     date_time = Column(DateTime)
 
-    user_id = Column(Integer, ForeignKey("user_tbl.id"), nullable="True")
+    user_id = Column(Integer, ForeignKey("user_tbl.id"))
     user = relationship("User")
 
-    post_id = Column(Integer, ForeignKey("post_tbl.id"), nullable="True")
+    post_id = Column(Integer, ForeignKey("post_tbl.id"))
     post = relationship("Post")
 
     def __init__(self, text, post, user):

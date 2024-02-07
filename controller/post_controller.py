@@ -1,12 +1,3 @@
-from datetime import datetime
-from model.da.user_da import UserDa
-from model.entity.user import User
-from model.entity.post import Post
-from model.entity.comment import Comment
-from model.entity.like import Like
-from model.da.post_da import *
-from tools.Validator import text_validator, post_id_validator, user_id_validator, verify_user_for_post
-
 
 class PostController:
 

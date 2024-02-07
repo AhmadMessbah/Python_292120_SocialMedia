@@ -13,9 +13,9 @@ class User(Base):
     password = Column(String(30))
     status = Column(Boolean)
 
-    posts = relationship("Post", back_populates="user", cascade="all, delete-orphan")
-    comments = relationship("Comment", back_populates="user", cascade="all, delete-orphan")
-    likes = relationship("Like", back_populates="user", cascade="all, delete-orphan")
+    posts = relationship("Post")
+    comments = relationship("Comment")
+    likes = relationship("Like")
 
     def __init__(self, name, family, username, password, status=True):
         self.name = name

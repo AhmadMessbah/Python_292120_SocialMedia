@@ -1,8 +1,3 @@
-from model.da.user_da import *
-from tools.Validator import *
-from model.entity.user import User
-from model.entity.post import Post
-from model.entity.comment import Comment
 
 
 class UserController:
