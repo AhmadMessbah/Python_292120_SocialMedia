@@ -11,7 +11,8 @@ from model.da.post_da import PostDa
 
 pc = PostController()
 uc = UserController()
-print(pc.save("xxx", uc.find_by_id_internal(111)))
+#print(uc.find_by_id_internal(111))
+print(pc.save("biavasatsulivann", uc.find_by_id_internal(1111)))
 #print(uc.find_by_id_internal(180))
 # pa = PostDa()
 # print(pa.validate_user_for_post(uc.find_by_id_internal(18)))

@@ -5,21 +5,21 @@ from model.entity.post import Post
 from model.entity.comment import Comment
 from model.entity.like import Like
 from model.da.post_da import *
-from tools.Validator import text_validator, post_id_validator, user_id_validator
+from tools.Validator import text_validator, post_id_validator, user_id_validator, verify_user_for_post
 
 
 class PostController:
 
     def save(self, text, user):
         try:
-            if text_validator(text):
+            if (verify_user_for_post(user)) and (text_validator(text)):
                 post = Post(text, user)
                 da = PostDa()
                 da.save(post)
                 return "Saved"
             else:
                 raise ValueError
-        except Exception as e:
+        except ValueError as e:
             return str(e)
 
     # def edit(self, id, text, user):
