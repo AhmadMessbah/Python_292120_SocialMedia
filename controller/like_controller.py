@@ -6,7 +6,6 @@ from model.entity.like import Like
 from model.da.like_da import *
 
 
-
 class LikeController:
 
     def save(self, post, user):
