@@ -40,7 +40,7 @@ class PostView():
         Button(self.win, text="Save", width=8, command=self.Save_Click).place(x=20, y=200)
         Button(self.win, text="Edit", width=8, command=self.Edit_Click).place(x=100, y=200)
         Button(self.win, text="Remove", width=8, command=self.Remove_Click).place(x=180, y=200)
-        Button(self.win, text="New", width=8, command=self.reset_form).place(x=100, y=150)
+        Button(self.win, text="New Post", width=8, command=self.reset_form).place(x=100, y=150)
 
         self.table.place(x=250, y=20)
 
@@ -55,11 +55,12 @@ class PostView():
 
     def Edit_Click(self):
         if self.username.get() == UserController.current_user.username:
-            message = self.controller.edit(self.id.get(), self.text.get(), UserController.current_user)
+            message = self.controller.edit(self.id.get(),self.text.get(), UserController.current_user)
             msg.showinfo("Edit", message)
         else:
             msg.showerror("Error", "This Post Doesnt Belong to You")
         self.reset_form()
+
 
     def Remove_Click(self):
         if self.username.get() == UserController.current_user.username:
