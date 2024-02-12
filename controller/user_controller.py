@@ -8,7 +8,7 @@ from model.entity.comment import Comment
 class UserController:
     current_user = None
     @classmethod
-    def save(self, name, family, username, password, status=True):
+    def save(cls, name, family, username, password, status=True):
         try:
             if name_validator(name) and name_validator(family) and username_validator(username):
                 user = User(name, family, username, password, status=True)
@@ -19,8 +19,8 @@ class UserController:
                 raise ValueError("Invalid Data")
         except Exception as e:
             return str(e)
-
-    def edit(self, id, name, family, username, password, status):
+    @classmethod
+    def edit(cls, id, name, family, username, password, status):
         try:
             if name_validator(name) and name_validator(family) and user_id_validator(id):
                 da = UserDa()
@@ -36,8 +36,8 @@ class UserController:
                 raise ValueError("Invalid Data")
         except Exception as e:
             return str(e)
-
-    def remove(self, id):
+    @classmethod
+    def remove(cls, id):
         try:
             if user_id_validator(id):
                 da = UserDa()
@@ -47,8 +47,8 @@ class UserController:
                 raise ValueError("User Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_all(self):
+    @classmethod
+    def find_all(cls):
         try:
             da = UserDa()
             return da.find_all(User)
@@ -65,8 +65,8 @@ class UserController:
                 raise ValueError("User Doesnt Exist")
         except Exception as e:
             return str(e)
-
-    def find_by_id_internal(self, id):
+    @classmethod
+    def find_by_id_internal(cls, id):
         try:
             da = UserDa()
             if da.find_by_id_internal(User, id):
@@ -75,8 +75,8 @@ class UserController:
                 raise ValueError("User Doesnt Exist")
         except Exception as e:
             return str(e)
-
-    def find_by_username(self, username):
+    @classmethod
+    def find_by_username(cls, username):
         try:
             da = UserDa()
             if da.find_by_username(User, username):
@@ -86,7 +86,8 @@ class UserController:
         except Exception as e:
             return str(e)
 
-    def find_by_username_and_password(self, username, password):
+    @classmethod
+    def find_by_username_and_password(cls, username, password):
         try:
             da = UserDa()
             if da.find_by_username_and_password(username, password):

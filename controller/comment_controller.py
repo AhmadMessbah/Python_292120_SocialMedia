@@ -9,7 +9,8 @@ from tools.Validator import text_validator, verify_user_for_comment, verify_post
 
 class CommentController:
 
-    def save(self, text, post, user):
+    @classmethod
+    def save(cls, text, post, user):
         try:
             if text_validator(text) and verify_user_for_comment(user) and verify_post_for_comment(post):
                 comment = Comment(text, post, user)
@@ -20,8 +21,8 @@ class CommentController:
                 raise ValueError
         except ValueError as e:
             return str(e)
-
-    def edit(self, id, text, post, user):
+    @classmethod
+    def edit(cls, id, text, post, user):
         try:
             if comment_id_validator(id) and text_validator(text) and verify_user_for_comment(
                     user) and verify_post_for_comment(post):
@@ -37,8 +38,8 @@ class CommentController:
                 raise ValueError
         except ValueError as e:
             return str(e)
-
-    def remove(self, id):
+    @classmethod
+    def remove(cls, id):
         try:
             da = CommentDa()
             if da.find_by_id(Comment, id):
@@ -48,15 +49,15 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_all(self):
+    @classmethod
+    def find_all(cls):
         try:
             da = CommentDa()
             return da.find_all(Comment)
         except Exception as e:
             return str(e)
-
-    def find_by_id(self, id):
+    @classmethod
+    def find_by_id(cls, id):
         try:
             da = CommentDa()
             if da.find_by_id(Comment, id):
@@ -65,8 +66,8 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist")
         except Exception as e:
             return str(e)
-
-    def find_by_id_internal(self, id):
+    @classmethod
+    def find_by_id_internal(cls, id):
         try:
             da = CommentDa()
             if da.find_by_id_internal(Comment, id):
@@ -75,8 +76,8 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist")
         except Exception as e:
             return str(e)
-
-    def find_by_user(self, user):
+    @classmethod
+    def find_by_user(cls, user):
         try:
             if verify_user_for_comment(user):
                 da = CommentDa()
@@ -88,8 +89,8 @@ class CommentController:
                 raise ValueError("User Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_by_post(self, post):
+    @classmethod
+    def find_by_post(cls, post):
         try:
             da = CommentDa()
             if verify_post_for_comment(post):
@@ -101,8 +102,8 @@ class CommentController:
                 raise ValueError("Post Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_by_text(self, text):
+    @classmethod
+    def find_by_text(cls, text):
         try:
             da = CommentDa()
             if da.find_by_text(Comment, text):

@@ -38,7 +38,8 @@ class PostController:
         except ValueError as e:
             return str(e)
 
-    def remove(self, id):
+    @classmethod
+    def remove(cls, id):
         try:
             if post_id_validator(id):
                 da = PostDa()
@@ -50,14 +51,16 @@ class PostController:
         except Exception as e:
             return str(e)
 
-    def find_all(self):
+    @classmethod
+    def find_all(cls):
         try:
             da = PostDa()
             return da.find_all(Post)
         except Exception as e:
             return str(e)
 
-    def find_by_id(self, id):
+    @classmethod
+    def find_by_id(cls, id):
         try:
             if post_id_validator(id):
                 da = PostDa()
@@ -67,7 +70,8 @@ class PostController:
         except Exception as e:
             return str(e)
 
-    def find_by_id_internal(self, id):
+    @classmethod
+    def find_by_id_internal(cls, id):
         try:
             if post_id_validator(id):
                 da = PostDa()
@@ -76,8 +80,8 @@ class PostController:
                 raise ValueError("Post Doesnt Exist")
         except Exception as e:
             return str(e)
-
-    def find_by_user(self, user):
+    @classmethod
+    def find_by_user(cls, user):
         try:
             if verify_user_for_post(user):
                 da = PostDa()
@@ -87,8 +91,8 @@ class PostController:
                 raise ValueError("User Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_by_text(self, text):
+    @classmethod
+    def find_by_text(cls, text):
         try:
             da = PostDa()
             if da.find_by_text(Post, text):

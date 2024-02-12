@@ -8,7 +8,8 @@ from model.da.like_da import *
 
 class LikeController:
 
-    def save(self, post, user):
+    @classmethod
+    def save(cls, post, user):
         try:
             like = Like(post, user)
             da = LikeDa()
@@ -16,8 +17,8 @@ class LikeController:
             return "Saved"
         except Exception as e:
             return str(e)
-
-    def edit(self, id, post, user):
+    @classmethod
+    def edit(cls, id, post, user):
         try:
             da = LikeDa()
             like = da.find_by_id(Like, id)
@@ -28,8 +29,8 @@ class LikeController:
             return "Edited"
         except Exception as e:
             return str(e)
-
-    def remove(self, id):
+    @classmethod
+    def remove(cls, id):
         try:
             da = LikeDa()
             if da.find_by_id(Like, id):
@@ -39,29 +40,29 @@ class LikeController:
                 raise ValueError("Like Doesnt Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_all(self):
+    @classmethod
+    def find_all(cls):
         try:
             da = LikeDa()
             return da.find_all(Like)
         except Exception as e:
             return str(e)
-
-    def find_by_id(self, id):
+    @classmethod
+    def find_by_id(self, cls):
         try:
             da = LikeDa()
             return da.find_by_id(Like, id)
         except Exception as e:
             return str(e)
-
-    def find_by_id_internal(self, id):
+    @classmethod
+    def find_by_id_internal(cls, id):
         try:
             da = LikeDa()
             return da.find_by_id_internal(Like, id)
         except Exception as e:
             return str(e)
-
-    def find_by_user(self, user):
+    @classmethod
+    def find_by_user(cls, user):
         try:
             da = LikeDa()
             if da.find_by_user(Like, user):
@@ -70,8 +71,8 @@ class LikeController:
                 raise ValueError("User Doesn't Exist!!!")
         except Exception as e:
             return str(e)
-
-    def find_by_post(self, post):
+    @classmethod
+    def find_by_post(cls, post):
         try:
             da = LikeDa()
             if da.find_by_post(Like, post):
