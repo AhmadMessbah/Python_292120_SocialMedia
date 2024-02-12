@@ -55,7 +55,7 @@ class DatabaseManager:
 
     def find_all(self, class_name):
         self.make_engine()
-        entity_list = self.session.query(class_name).all()
+        entity_list = self.session.query(class_name).order_by(class_name.date_time.desc()).all()
         return entity_list
 
     def find_by_id(self, class_name, id):
