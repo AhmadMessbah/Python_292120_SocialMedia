@@ -20,6 +20,7 @@ class LoginView:
         self.password = StringVar()
         Entry(self.window, textvariable=self.password).pack()
 
+
         # login button
         Button(self.window, text="Login", command=self.login_click).place(x=125, y=100)
 
