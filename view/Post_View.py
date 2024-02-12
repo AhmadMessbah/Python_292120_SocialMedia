@@ -7,11 +7,12 @@ from model.entity import *
 
 
 class PostView():
-    def __init__(self, user):
+    def __init__(self):
         self.win = Tk()
         self.win.geometry("740x300")
         self.win.title("Post Feed")
         self.controller = PostController()
+
         Label(self.win, text="Post Id").place(x=20, y=20)
         self.id = IntVar()
         Entry(self.win, state="readonly", textvariable=self.id).place(x=100, y=20)
@@ -54,12 +55,11 @@ class PostView():
 
     def Edit_Click(self):
         if self.username.get() == UserController.current_user.username:
-            message = self.controller.edit(self.id.get(),self.text.get(), UserController.current_user)
+            message = self.controller.edit(self.id.get(), self.text.get(), UserController.current_user)
             msg.showinfo("Edit", message)
         else:
             msg.showerror("Error", "This Post Doesnt Belong to You")
         self.reset_form()
-
 
     def Remove_Click(self):
         if self.username.get() == UserController.current_user.username:

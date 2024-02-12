@@ -1,18 +1,18 @@
 from tkinter import *
 from view.Post_View import PostView
 
+
 class UserView:
     def __init__(self, user):
         self.window = Tk()
-        self.window.geometry("300x300")
+        self.window.geometry("300x230")
         self.window.title("User Profile")
-        self.user = user
         Label(self.window, text=user.name, font=("Arial", 20)).pack()
 
         if user.status == True:
-            Button(self.window, width=8, text="Post", command=self.open_post_view).pack()
-            Button(self.window, width=8, text="Like").pack()
-            Button(self.window, width=8, text="Comment").pack()
+            Button(self.window, width=8, text="Post", command=self.open_post_view).place(x=40, y=100)
+            Button(self.window, width=8, text="Like").place(x=120, y=100)
+            Button(self.window, width=8, text="Comment").place(x=200, y=100)
         else:
             Label(self.window, text="Suspended Account", font=("Arial", 20)).pack()
 
@@ -20,4 +20,4 @@ class UserView:
 
     def open_post_view(self):
         self.window.destroy()
-        PostView(self.user)
+        PostView()
