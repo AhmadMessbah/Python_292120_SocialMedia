@@ -7,7 +7,7 @@ class LoginView:
     def __init__(self):
         self.controller = UserController()
         self.window = Tk()
-        self.window.geometry("300x300")
+        self.window.geometry("300x190")
         self.window.title("User Login")
 
         # username
@@ -21,7 +21,7 @@ class LoginView:
         Entry(self.window, textvariable=self.password).pack()
 
         # login button
-        Button(self.window, text="Login", command=self.login_click).pack()
+        Button(self.window, text="Login", command=self.login_click).place(x=125, y=100)
 
         self.window.mainloop()
 
