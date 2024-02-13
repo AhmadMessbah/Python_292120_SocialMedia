@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Comment UI Save and New Comment was completed and tested successfully -Amirreaza">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/comment_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/comment_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/post_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/post_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/user_view.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Comment UI Save and New Comment was completed and tested successfully -Amirreaza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,15 +172,7 @@
       <workItem from="1707780384044" duration="4889000" />
       <workItem from="1707785709403" duration="6913000" />
       <workItem from="1707793253775" duration="10332000" />
-      <workItem from="1707805200745" duration="5250000" />
-    </task>
-    <task id="LOCAL-00016" summary="updated the database_manager 4 efficiency amirreza">
-      <option name="closed" value="true" />
-      <created>1707036462593</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1707036462593</updated>
+      <workItem from="1707805200745" duration="5502000" />
     </task>
     <task id="LOCAL-00017" summary="updated the edit function in database_manager and correponding test Amirreza">
       <option name="closed" value="true" />
@@ -571,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707805707036</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Comment UI Save and New Comment was completed and tested successfully -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707810725750</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1707810725750</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
