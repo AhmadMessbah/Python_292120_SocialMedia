@@ -121,8 +121,9 @@ class CommentController:
         except Exception as e:
             return str(e)
 
+    @property
     def get_comments_sorted_by_date_and_post_id(self):
         da = CommentDa()
         comments = da.find_all(Comment)
-        sorted_comments = sorted(comments, key=lambda comment: comment.post_id)
+        sorted_comments = sorted(comments, key=lambda comment: (-comment.id) and (-comment.post_id))
         return sorted_comments

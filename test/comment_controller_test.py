@@ -10,4 +10,4 @@
 from controller import CommentController
 
 cc = CommentController()
-print(cc.get_comments_sorted_by_date_and_post_id())
+print(cc.get_comments_sorted_by_date_and_post_id)
