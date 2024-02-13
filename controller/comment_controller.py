@@ -1,14 +1,14 @@
 from datetime import datetime
-from model.entity.user import User
-from model.entity.post import Post
-from model.entity.comment import Comment
-from model.entity.like import Like
+from controller.post_controller import *
+from controller.user_controller import *
+from model.da import *
 from model.da.comment_da import *
-from tools.Validator import text_validator, verify_user_for_comment, verify_post_for_comment, comment_id_validator
-
+from model.entity import *
+from model.entity.comment import Comment
+from tools.Validator import *
 
 class CommentController:
-
+    current_comment = None
     @classmethod
     def save(cls, text, post, user):
         try:
@@ -16,6 +16,8 @@ class CommentController:
                 comment = Comment(text, post, user)
                 da = CommentDa()
                 da.save(comment)
+
+
                 return "Saved"
             else:
                 raise ValueError
@@ -121,7 +123,7 @@ class CommentController:
         except Exception as e:
             return str(e)
 
-    @property
+
     def get_comments_sorted_by_date_and_post_id(self):
         da = CommentDa()
         comments = da.find_all(Comment)

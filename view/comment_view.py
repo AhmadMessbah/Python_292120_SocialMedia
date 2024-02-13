@@ -2,10 +2,14 @@ from tkinter import *
 import tkinter.ttk as ttk
 import tkinter.messagebox as msg
 
-from controller import CommentController
-from controller.post_controller import PostController
-from controller.user_controller import UserController
-from model.entity import *
+from controller import *
+from model.entity.comment import Comment
+from model.entity.like import Like
+from model.entity.post import Post
+from model.entity.user import User
+from controller.comment_controller import *
+
+
 
 
 class CommentView():
@@ -49,7 +53,7 @@ class CommentView():
         self.table.heading(4, text="Post ID")
         self.table.heading(5, text="Post Text")
 
-        self.table.bind("<<TreeviewSelect>>", self.Select_Post)
+        self.table.bind("<<TreeviewSelect>>", self.Select_Comment)
 
         Button(self.win, text="Save", width=8, command=self.Save_Click).place(x=20, y=300)
         Button(self.win, text="Edit", width=8, command=self.Edit_Click).place(x=100, y=300)
@@ -61,12 +65,13 @@ class CommentView():
         self.reset_form()
         self.win.mainloop()
 
-    def Save_Click(self):
-        pass
-        # message = self.controller.save(self.text.get(), UserController.current_user)
-        # msg.showinfo("Save", message)
+    # text, post, user
 
-        # self.reset_form()
+    def Save_Click(self):
+        message = self.controller.save(self.comment_text.get(), PostController.current_post,
+                                       UserController.current_user)
+        msg.showinfo("Save", message)
+        self.reset_form()
 
     def Edit_Click(self):
         pass
@@ -90,16 +95,16 @@ class CommentView():
         for item in self.table.get_children():
             self.table.delete(item)
 
-        for comment in self.controller.get_comments_sorted_by_date_and_post_id:
-            self.table.insert("", END, values=[comment.id, comment.text, comment.user.username, comment.post.id, comment.post.text])
+        for comment in self.controller.get_comments_sorted_by_date_and_post_id():
+            self.table.insert("", END, values=[comment.id, comment.text, comment.user.username, comment.post.id,comment.post.text])
 
         self.comment_id.set("")
         self.comment_text.set("")
         self.username.set(UserController.current_user.username)
-        self.post_id.set("")
-        self.post_text.set("")
+        self.post_id.set(PostController.current_post.id)
+        self.post_text.set(PostController.current_post.text)
 
-    def Select_Post(self, event):
+    def Select_Comment(self, event):
         selected_item = self.table.focus()
         comment = self.table.item(selected_item, "values")
         if comment:
@@ -108,6 +113,5 @@ class CommentView():
             self.username.set(comment[2])
             self.post_id.set(comment[3])
             self.post_text.set(comment[4])
-
-
-
+            CommentController.current_comment = CommentController.find_by_id(comment[0])
+            PostController.current_post = PostController.find_by_id(comment[3])

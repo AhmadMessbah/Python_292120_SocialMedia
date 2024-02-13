@@ -9,6 +9,7 @@ from tools.Validator import text_validator, post_id_validator, user_id_validator
 
 
 class PostController:
+    current_post=None
     @classmethod
     def save(cls, text, user):
         try:

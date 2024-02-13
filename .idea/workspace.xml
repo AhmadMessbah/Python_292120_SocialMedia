@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Post UI now groups chrocogilcally and by post ID successfully -Amirreaza" />
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Post UI now groups chrocogilcally and by post ID successfully -Amirreaza">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/comment_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/comment_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/post_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/post_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/entity/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Comment_View.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/comment_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Post_View.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/Post_View.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/user_view.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,6 +180,7 @@
       <workItem from="1707779299802" duration="303000" />
       <workItem from="1707780384044" duration="4889000" />
       <workItem from="1707785709403" duration="6913000" />
+      <workItem from="1707793253775" duration="8699000" />
     </task>
     <task id="LOCAL-00009" summary="classes and da road map Updated Amirreza">
       <option name="closed" value="true" />
@@ -659,7 +669,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/controller/comment_controller.py</url>
-          <line>119</line>
+          <line>121</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -678,9 +688,10 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post_da.coverage" NAME="post_da Coverage Results" MODIFIED="1707147709023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707046734890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$login_view.coverage" NAME="login_view Coverage Results" MODIFIED="1707707749389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707792718539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707802018489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_da.coverage" NAME="user_da Coverage Results" MODIFIED="1707792262421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$Validator.coverage" NAME="Validator Coverage Results" MODIFIED="1707290869140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$comment_view.coverage" NAME="comment_view Coverage Results" MODIFIED="1707801296358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$like.coverage" NAME="like Coverage Results" MODIFIED="1707140443933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$comment_controller.coverage" NAME="comment_controller Coverage Results" MODIFIED="1707790912851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$chat_da.coverage" NAME="chat_da Coverage Results" MODIFIED="1706284023829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />

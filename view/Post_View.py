@@ -1,6 +1,8 @@
 from tkinter import *
 import tkinter.ttk as ttk
 import tkinter.messagebox as msg
+
+from controller.comment_controller import CommentController
 from controller.post_controller import PostController
 from controller.user_controller import UserController
 from model.entity import *
