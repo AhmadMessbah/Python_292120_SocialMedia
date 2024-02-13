@@ -1,7 +1,7 @@
 from tkinter import *
 
 from view.comment_view import CommentView
-from view.Post_View import PostView
+from view.post_view import PostView
 
 
 class UserView:
