@@ -1,4 +1,6 @@
 from tkinter import *
+
+from view.CommentView import CommentView
 from view.Post_View import PostView
 
 
@@ -11,8 +13,8 @@ class UserView:
 
         if user.status == True:
             Button(self.window, width=8, text="Post", command=self.open_post_view).place(x=40, y=100)
-            Button(self.window, width=8, text="Like", command=self.open_comment_view).place(x=120, y=100)
-            Button(self.window, width=8, text="Comment", command=self.open_like_view).place(x=200, y=100)
+            Button(self.window, width=8, text="Like", command=self.open_like_view).place(x=120, y=100)
+            Button(self.window, width=8, text="Comment", command=self.open_comment_view).place(x=200, y=100)
         else:
             Label(self.window, text="Suspended Account", font=("Arial", 20)).pack()
 
@@ -23,7 +25,8 @@ class UserView:
         PostView()
 
     def open_comment_view(self):
-        pass
+        self.window.destroy()
+        CommentView()
 
     def open_like_view(self):
         pass

@@ -21,3 +21,5 @@ class Comment(Base):
         self.post = post
         self.user = user
         self.date_time = datetime.now()
+    def __repr__(self):
+        return str(self.__dict__)
