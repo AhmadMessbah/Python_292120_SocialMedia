@@ -90,7 +90,7 @@ class CommentView():
         for item in self.table.get_children():
             self.table.delete(item)
 
-        for comment in self.controller.find_all():
+        for comment in self.controller.get_comments_sorted_by_date_and_post_id():
             self.table.insert("", END, values=[comment.id, comment.text, comment.user.username, comment.post.id, comment.post.text])
 
         self.comment_id.set("")

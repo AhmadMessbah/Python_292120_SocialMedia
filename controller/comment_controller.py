@@ -21,6 +21,7 @@ class CommentController:
                 raise ValueError
         except ValueError as e:
             return str(e)
+
     @classmethod
     def edit(cls, id, text, post, user):
         try:
@@ -38,6 +39,7 @@ class CommentController:
                 raise ValueError
         except ValueError as e:
             return str(e)
+
     @classmethod
     def remove(cls, id):
         try:
@@ -49,6 +51,7 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist!!!")
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_all(cls):
         try:
@@ -56,6 +59,7 @@ class CommentController:
             return da.find_all(Comment)
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_by_id(cls, id):
         try:
@@ -66,6 +70,7 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist")
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_by_id_internal(cls, id):
         try:
@@ -76,6 +81,7 @@ class CommentController:
                 raise ValueError("Comment Doesnt Exist")
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_by_user(cls, user):
         try:
@@ -89,6 +95,7 @@ class CommentController:
                 raise ValueError("User Doesn't Exist!!!")
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_by_post(cls, post):
         try:
@@ -102,6 +109,7 @@ class CommentController:
                 raise ValueError("Post Doesn't Exist!!!")
         except Exception as e:
             return str(e)
+
     @classmethod
     def find_by_text(cls, text):
         try:
@@ -112,3 +120,9 @@ class CommentController:
                 raise ValueError("No Comment Found")
         except Exception as e:
             return str(e)
+
+    def get_comments_sorted_by_date_and_post_id(self):
+        da = CommentDa()
+        comments = da.find_all(Comment)
+        sorted_comments = sorted(comments, key=lambda comment: comment.post_id)
+        return sorted_comments
