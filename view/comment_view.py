@@ -73,14 +73,14 @@ class CommentView():
         msg.showinfo("Save", message)
         self.reset_form()
 
+
     def Edit_Click(self):
-        pass
-        # if self.username.get() == UserController.current_user.username:
-        #     message = self.controller.edit(self.id.get(),self.text.get(), UserController.current_user)
-        #     msg.showinfo("Edit", message)
-        # else:
-        #     msg.showerror("Error", "This Post Doesnt Belong to You")
-        # self.reset_form()
+        if self.username.get() == UserController.current_user.username:
+            message = self.controller.edit(self.comment_id.get(),self.comment_text.get(), PostController.current_post,UserController.current_user)
+            msg.showinfo("Edit", message)
+        else:
+            msg.showerror("Error", "This Post Doesnt Belong to You")
+        self.reset_form()
 
     def Remove_Click(self):
         if self.username.get() == UserController.current_user.username:

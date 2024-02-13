@@ -16,8 +16,6 @@ class CommentController:
                 comment = Comment(text, post, user)
                 da = CommentDa()
                 da.save(comment)
-
-
                 return "Saved"
             else:
                 raise ValueError
@@ -27,10 +25,9 @@ class CommentController:
     @classmethod
     def edit(cls, id, text, post, user):
         try:
-            if comment_id_validator(id) and text_validator(text) and verify_user_for_comment(
-                    user) and verify_post_for_comment(post):
+            if comment_id_validator(id) and text_validator(text) and verify_user_for_comment(user) and verify_post_for_comment(post):
                 da = CommentDa()
-                comment = da.find_by_id(Comment, id)
+                comment = da.find_by_id_internal(Comment, id)
                 comment.post = post
                 comment.user = user
                 comment.text = text
