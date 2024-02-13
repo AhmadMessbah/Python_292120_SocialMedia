@@ -6,6 +6,7 @@ from controller.comment_controller import CommentController
 from controller.post_controller import PostController
 from controller.user_controller import UserController
 from model.entity import *
+from view.comment_view import CommentView
 
 
 class PostView():
@@ -43,6 +44,8 @@ class PostView():
         Button(self.win, text="Edit", width=8, command=self.Edit_Click).place(x=100, y=200)
         Button(self.win, text="Remove", width=8, command=self.Remove_Click).place(x=180, y=200)
         Button(self.win, text="New Post", width=8, command=self.reset_form).place(x=100, y=150)
+        Button(self.win, text="Comment", width=8, command=self.Comment_Click).place(x=20, y=150)
+        Button(self.win, text="Like", width=8, command=self.Like_Click).place(x=180, y=150)
 
         self.table.place(x=250, y=20)
 
@@ -57,12 +60,11 @@ class PostView():
 
     def Edit_Click(self):
         if self.username.get() == UserController.current_user.username:
-            message = self.controller.edit(self.id.get(),self.text.get(), UserController.current_user)
+            message = self.controller.edit(self.id.get(), self.text.get(), UserController.current_user)
             msg.showinfo("Edit", message)
         else:
             msg.showerror("Error", "This Post Doesnt Belong to You")
         self.reset_form()
-
 
     def Remove_Click(self):
         if self.username.get() == UserController.current_user.username:
@@ -90,3 +92,11 @@ class PostView():
             self.id.set(post[0])
             self.text.set(post[1])
             self.username.set(post[2])
+
+    def Comment_Click(self):
+        PostController.current_post = PostController.find_by_id(self.id.get())
+        self.win.destroy()
+        CommentView()
+
+    def Like_Click(self):
+        pass

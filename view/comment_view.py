@@ -9,37 +9,34 @@ from model.entity.post import Post
 from model.entity.user import User
 from controller.comment_controller import *
 
-
-
-
 class CommentView():
     def __init__(self):
-        self.win = Tk()
-        self.win.geometry("1100x400")
-        self.win.title("Comment Feed")
+        self.win_comment = Tk()
+        self.win_comment.geometry("1100x400")
+        self.win_comment.title("Comment Feed")
         self.controller = CommentController()
 
-        Label(self.win, text="Comment Id").place(x=20, y=20)
+        Label(self.win_comment, text="Comment Id").place(x=20, y=20)
         self.comment_id = IntVar()
-        Entry(self.win, state="readonly", textvariable=self.comment_id).place(x=120, y=20)
+        Entry(self.win_comment, state="readonly", textvariable=self.comment_id).place(x=120, y=20)
 
-        Label(self.win, text="Comment Text").place(x=20, y=60)
+        Label(self.win_comment, text="Comment Text").place(x=20, y=60)
         self.comment_text = StringVar()
-        Entry(self.win, textvariable=self.comment_text).place(x=120, y=60)
+        Entry(self.win_comment, textvariable=self.comment_text).place(x=120, y=60)
 
-        Label(self.win, text="username").place(x=20, y=100)
+        Label(self.win_comment, text="username").place(x=20, y=100)
         self.username = StringVar()
-        Entry(self.win, state="readonly", textvariable=self.username).place(x=120, y=100)
+        Entry(self.win_comment, state="readonly", textvariable=self.username).place(x=120, y=100)
 
-        Label(self.win, text="Post ID").place(x=20, y=140)
+        Label(self.win_comment, text="Post ID").place(x=20, y=140)
         self.post_id = StringVar()
-        Entry(self.win, state="readonly", textvariable=self.post_id).place(x=120, y=140)
+        Entry(self.win_comment, state="readonly", textvariable=self.post_id).place(x=120, y=140)
 
-        Label(self.win, text="Post Text").place(x=20, y=180)
+        Label(self.win_comment, text="Post Text").place(x=20, y=180)
         self.post_text = StringVar()
-        Entry(self.win, state="readonly", textvariable=self.post_text).place(x=120, y=180)
+        Entry(self.win_comment, state="readonly", textvariable=self.post_text).place(x=120, y=180)
 
-        self.table = ttk.Treeview(self.win, columns=(1, 2, 3, 4, 5), show="headings")
+        self.table = ttk.Treeview(self.win_comment, columns=(1, 2, 3, 4, 5), show="headings")
 
         self.table.column(1, width=80)
         self.table.column(2, width=300)
@@ -55,21 +52,20 @@ class CommentView():
 
         self.table.bind("<<TreeviewSelect>>", self.Select_Comment)
 
-        Button(self.win, text="Save", width=8, command=self.Save_Click).place(x=20, y=300)
-        Button(self.win, text="Edit", width=8, command=self.Edit_Click).place(x=100, y=300)
-        Button(self.win, text="Remove", width=8, command=self.Remove_Click).place(x=180, y=300)
-        Button(self.win, text="New Comment", width=14, command=self.reset_form).place(x=80, y=250)
+        Button(self.win_comment, text="Save", width=8, command=self.Save_Click).place(x=20, y=300)
+        Button(self.win_comment, text="Edit", width=8, command=self.Edit_Click).place(x=100, y=300)
+        Button(self.win_comment, text="Remove", width=8, command=self.Remove_Click).place(x=180, y=300)
+        Button(self.win_comment, text="New Comment", width=14, command=self.reset_form).place(x=80, y=250)
+
 
         self.table.place(x=250, y=18)
 
         self.reset_form()
-        self.win.mainloop()
+        self.win_comment.mainloop()
 
-    # text, post, user
 
     def Save_Click(self):
-        message = self.controller.save(self.comment_text.get(), PostController.current_post,
-                                       UserController.current_user)
+        message = self.controller.save(self.comment_text.get(), PostController.current_post,UserController.current_user)
         msg.showinfo("Save", message)
         self.reset_form()
 

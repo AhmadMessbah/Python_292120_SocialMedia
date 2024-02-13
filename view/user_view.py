@@ -1,5 +1,4 @@
 from tkinter import *
-
 from view.comment_view import CommentView
 from view.post_view import PostView
 
