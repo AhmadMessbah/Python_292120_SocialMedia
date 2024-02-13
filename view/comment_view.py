@@ -83,13 +83,12 @@ class CommentView():
         # self.reset_form()
 
     def Remove_Click(self):
-        pass
-        # if self.username.get() == UserController.current_user.username:
-        #     self.controller.remove(self.id.get())
-        #     msg.showinfo("removed", "Post was removed")
-        # else:
-        #     msg.showerror("Error", "This Post Doesnt Belong to You")
-        # self.reset_form()
+        if self.username.get() == UserController.current_user.username:
+            self.controller.remove(self.comment_id.get())
+            msg.showinfo("removed", "Post was removed")
+        else:
+            msg.showerror("Error", "This Post Doesnt Belong to You")
+        self.reset_form()
 
     def reset_form(self):
         for item in self.table.get_children():
