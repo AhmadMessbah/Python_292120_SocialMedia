@@ -1,6 +1,6 @@
 from tkinter import *
 
-from view.CommentView import CommentView
+from view.Comment_View import CommentView
 from view.Post_View import PostView
 
 
