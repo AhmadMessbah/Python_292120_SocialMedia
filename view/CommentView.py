@@ -102,7 +102,6 @@ class CommentView():
     def Select_Post(self, event):
         selected_item = self.table.focus()
         comment = self.table.item(selected_item, "values")
-        print(comment)
         if comment:
             self.comment_id.set(comment[0])
             self.comment_text.set(comment[1])

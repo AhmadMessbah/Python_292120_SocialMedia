@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="made the post feed chronologically descending -Amirreaza">
-      <change afterPath="$PROJECT_DIR$/view/CommentView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/comment.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/comment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/user_view.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="created the Plost Feed UI and connect to the backend successfully -Amirreaza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,15 +169,7 @@
       <workItem from="1707289029502" duration="4228000" />
       <workItem from="1707703642424" duration="6651000" />
       <workItem from="1707779299802" duration="303000" />
-      <workItem from="1707780384044" duration="4473000" />
-    </task>
-    <task id="LOCAL-00005" summary="Entity Updated Amirreza">
-      <option name="closed" value="true" />
-      <created>1706281357039</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1706281357039</updated>
+      <workItem from="1707780384044" duration="4889000" />
     </task>
     <task id="LOCAL-00006" summary="Entity Updated Amirreza">
       <option name="closed" value="true" />
@@ -568,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707779354636</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="created the Plost Feed UI and connect to the backend successfully -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707785078678</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1707785078680</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Entity Updated Amirreza" />
     <MESSAGE value="Da Updated Amirreza" />
     <MESSAGE value="Update sn_view.py&#10;&#10;Matin" />
     <MESSAGE value="Da n da relations to entity  Updated Amirreza" />
@@ -646,7 +640,8 @@
     <MESSAGE value="a few used cases was tested successfully and ready for Ostad review -Amirreaza" />
     <MESSAGE value="decorative function feature was added to al lmethods in controller classed and init imporatation methodology was implemented successfully per final session training -Amirreaza" />
     <MESSAGE value="made the post feed chronologically descending -Amirreaza" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the post feed chronologically descending -Amirreaza" />
+    <MESSAGE value="created the Plost Feed UI and connect to the backend successfully -Amirreaza" />
+    <option name="LAST_COMMIT_MESSAGE" value="created the Plost Feed UI and connect to the backend successfully -Amirreaza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -677,7 +672,7 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post_da.coverage" NAME="post_da Coverage Results" MODIFIED="1707147709023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707046734890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$login_view.coverage" NAME="login_view Coverage Results" MODIFIED="1707707749389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707784879994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707785299789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_da.coverage" NAME="user_da Coverage Results" MODIFIED="1707140473152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$Validator.coverage" NAME="Validator Coverage Results" MODIFIED="1707290869140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$like.coverage" NAME="like Coverage Results" MODIFIED="1707140443933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/entity" />

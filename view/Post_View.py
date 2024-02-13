@@ -21,7 +21,7 @@ class PostView():
         self.text = StringVar()
         Entry(self.win, textvariable=self.text).place(x=100, y=60)
 
-        Label(self.win, text="username").place(x=20, y=100)
+        Label(self.win, text="Username").place(x=20, y=100)
         self.username = StringVar()
         Entry(self.win, state="readonly", textvariable=self.username).place(x=100, y=100)
 
@@ -33,7 +33,7 @@ class PostView():
 
         self.table.heading(1, text="Post ID")
         self.table.heading(2, text="Text")
-        self.table.heading(3, text="UserName")
+        self.table.heading(3, text="Username")
 
         self.table.bind("<<TreeviewSelect>>", self.Select_Post)
 
