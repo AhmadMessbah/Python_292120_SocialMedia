@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Post UI now groups chrocogilcally and by post ID successfully -Amirreaza">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca11455b-81bf-4c2c-9691-436ad9876c1c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/comment_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/comment_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/post_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/post_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/entity/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/entity/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Comment_View.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/comment_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Post_View.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/Post_View.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view/user_view.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6ec09c3-9448-4833-931d-0f5f47a75fc8" name="Changes" comment="Comment UI Save and New Comment was completed and tested successfully -Amirreaza" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,23 +171,7 @@
       <workItem from="1707779299802" duration="303000" />
       <workItem from="1707780384044" duration="4889000" />
       <workItem from="1707785709403" duration="6913000" />
-      <workItem from="1707793253775" duration="8699000" />
-    </task>
-    <task id="LOCAL-00009" summary="classes and da road map Updated Amirreza">
-      <option name="closed" value="true" />
-      <created>1706886131632</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1706886131632</updated>
-    </task>
-    <task id="LOCAL-00010" summary="classes and da road map Updated Amirreza">
-      <option name="closed" value="true" />
-      <created>1706886144562</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1706886144562</updated>
+      <workItem from="1707793253775" duration="9046000" />
     </task>
     <task id="LOCAL-00011" summary="classes and da road map Updated Amirreza">
       <option name="closed" value="true" />
@@ -574,7 +549,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707792689332</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Comment UI Save and New Comment was completed and tested successfully -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707802214871</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1707802214872</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Comment UI Save and New Comment was completed and tested successfully -Amirreaza">
+      <option name="closed" value="true" />
+      <created>1707802303064</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1707802303065</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update sn_view.py&#10;&#10;Matin" />
     <MESSAGE value="Da n da relations to entity  Updated Amirreza" />
     <MESSAGE value="classes and da road map Updated Amirreza" />
     <MESSAGE value="config Updated Amirreza" />
@@ -652,7 +642,8 @@
     <MESSAGE value="made the post feed chronologically descending -Amirreaza" />
     <MESSAGE value="created the Plost Feed UI and connect to the backend successfully -Amirreaza" />
     <MESSAGE value="Post UI now groups chrocogilcally and by post ID successfully -Amirreaza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Post UI now groups chrocogilcally and by post ID successfully -Amirreaza" />
+    <MESSAGE value="Comment UI Save and New Comment was completed and tested successfully -Amirreaza" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment UI Save and New Comment was completed and tested successfully -Amirreaza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,7 +679,7 @@
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$post_da.coverage" NAME="post_da Coverage Results" MODIFIED="1707147709023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$entitytests_database_manager.coverage" NAME="entitytests+database_manager Coverage Results" MODIFIED="1707046734890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$login_view.coverage" NAME="login_view Coverage Results" MODIFIED="1707707749389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
-    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707802018489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$App.coverage" NAME="App Coverage Results" MODIFIED="1707802365404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$user_da.coverage" NAME="user_da Coverage Results" MODIFIED="1707792262421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/da" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$Validator.coverage" NAME="Validator Coverage Results" MODIFIED="1707290869140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/Python_292120_SocialMedia$comment_view.coverage" NAME="comment_view Coverage Results" MODIFIED="1707801296358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view" />
